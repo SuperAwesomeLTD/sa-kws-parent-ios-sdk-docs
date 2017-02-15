@@ -1,0 +1,19 @@
+{
+	"id": "sa-kws-parent-ios-sdk",
+	"theme": {
+		"folder": "themes",
+		"res": "themeres",
+		"name": "satheme"
+	},
+	"project": {
+		"name": "iOS SDK",
+		"author": "Gabriel Coman",
+		"source": "https://github.com/SuperAwesomeLTD/sa-kws-parent-ios-sdk",
+		"domain": "KWS Children",
+		"min": "Android 3.0+"
+	},
+	"company": {
+		"name": "2016, SuperAwesome Ltd",
+		"support": "devsupport@superawesome.tv"
+	}
+}
