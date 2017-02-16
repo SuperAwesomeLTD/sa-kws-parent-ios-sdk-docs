@@ -5,9 +5,9 @@ To login as a parent user you'll have to call:
 
 .. code-block:: objective-c
 
-  [[KWSParent sdk] login: @"test@email.com"
-                    with: @"testtest"
-                     and: ^(BOOL operationOK) {
+  [[KWSParent sdk] loginUser: @"test@email.com"
+                withPassword: @"testtest"
+                 andResponse: ^(BOOL operationOK) {
                       if (operationOK) {
                         // logged in OK
                       } else {

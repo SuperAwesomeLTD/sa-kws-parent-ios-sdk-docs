@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Login as a user &mdash; iOS SDK 1.1.1 documentation</title>
+  <title>Login as a user &mdash; iOS SDK 1.2.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="iOS SDK 1.1.1 documentation" href="index.html"/>
+    <link rel="top" title="iOS SDK 1.2.0 documentation" href="index.html"/>
         <link rel="next" title="Persisting the user" href="02persist.html"/>
         <link rel="prev" title="Creating a new user" href="02create.html"/> 
 
@@ -65,7 +65,7 @@
             
                 <div class="version">
                     <a href="index.html" class="version_a">
-                        KWS Children iOS SDK 1.1.1
+                        KWS Children iOS SDK 1.2.0
                     </a>
                 </div>
             
@@ -141,9 +141,9 @@
   <div class="section" id="login-as-a-user">
 <h1>Login as a user<a class="headerlink" href="#login-as-a-user" title="Permalink to this headline">¶</a></h1>
 <p>To login as a parent user you&#8217;ll have to call:</p>
-<div class="highlight-objective-c"><div class="highlight"><pre><span class="p">[[</span><span class="n">KWSParent</span> <span class="n">sdk</span><span class="p">]</span> <span class="nl">login</span><span class="p">:</span> <span class="s">@&quot;test@email.com&quot;</span>
-                  <span class="nl">with</span><span class="p">:</span> <span class="s">@&quot;testtest&quot;</span>
-                   <span class="nl">and</span><span class="p">:</span> <span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">operationOK</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-objective-c"><div class="highlight"><pre><span class="p">[[</span><span class="n">KWSParent</span> <span class="n">sdk</span><span class="p">]</span> <span class="nl">loginUser</span><span class="p">:</span> <span class="s">@&quot;test@email.com&quot;</span>
+              <span class="nl">withPassword</span><span class="p">:</span> <span class="s">@&quot;testtest&quot;</span>
+               <span class="nl">andResponse</span><span class="p">:</span> <span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">operationOK</span><span class="p">)</span> <span class="p">{</span>
                     <span class="k">if</span> <span class="p">(</span><span class="n">operationOK</span><span class="p">)</span> <span class="p">{</span>
                       <span class="c1">// logged in OK</span>
                     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -211,13 +211,13 @@
     <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Versions</span>
-      1.1.1
+      1.2.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
       <dl>
         
-          <dd><a href="/sa-kws-parent-ios-sdk/latest">1.1.1</a></dd>
+          <dd><a href="/sa-kws-parent-ios-sdk/latest">1.2.0</a></dd>
         
       </dl>
     </div>
@@ -228,7 +228,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1.1',
+            VERSION:'1.2.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

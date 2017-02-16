@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Creating a new user &mdash; iOS SDK 1.1.1 documentation</title>
+  <title>Creating a new user &mdash; iOS SDK 1.2.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="iOS SDK 1.1.1 documentation" href="index.html"/>
+    <link rel="top" title="iOS SDK 1.2.0 documentation" href="index.html"/>
         <link rel="next" title="Login as a user" href="02login.html"/>
         <link rel="prev" title="Overview" href="01overview.html"/> 
 
@@ -65,7 +65,7 @@
             
                 <div class="version">
                     <a href="index.html" class="version_a">
-                        KWS Children iOS SDK 1.1.1
+                        KWS Children iOS SDK 1.2.0
                     </a>
                 </div>
             
@@ -141,11 +141,11 @@
   <div class="section" id="creating-a-new-user">
 <h1>Creating a new user<a class="headerlink" href="#creating-a-new-user" title="Permalink to this headline">¶</a></h1>
 <p>You can create a new user by calling:</p>
-<div class="highlight-objective-c"><div class="highlight"><pre><span class="p">[[</span><span class="n">KWSParent</span> <span class="n">sdk</span><span class="p">]</span> <span class="nl">create</span><span class="p">:</span> <span class="s">@&quot;test@email.com&quot;</span>
-                   <span class="nl">with</span><span class="p">:</span> <span class="s">@&quot;testtest&quot;</span>
-                    <span class="nl">and</span><span class="p">:</span> <span class="o">^</span><span class="p">(</span><span class="n">KWS_CREATE_PARENT_STATUS</span> <span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-objective-c"><div class="highlight"><pre><span class="p">[[</span><span class="n">KWSParent</span> <span class="n">sdk</span><span class="p">]</span> <span class="nl">createUser</span><span class="p">:</span> <span class="s">@&quot;test@email.com&quot;</span>
+               <span class="nl">withPassword</span><span class="p">:</span> <span class="s">@&quot;testtest&quot;</span>
+                <span class="nl">andResponse</span><span class="p">:</span> <span class="o">^</span><span class="p">(</span><span class="n">KWSParentCreateUserStatus</span> <span class="n">status</span><span class="p">)</span> <span class="p">{</span>
 
-                      <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">CREATED</span><span class="p">)</span> <span class="p">{</span>
+                      <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">KWSParent_CreateUser_Success</span><span class="p">)</span> <span class="p">{</span>
                         <span class="c1">// user created OK</span>
                       <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
                         <span class="c1">// there was an error creating user</span>
@@ -158,8 +158,8 @@
 <table border="1" class="docutils">
 <colgroup>
 <col width="12%" />
-<col width="41%" />
-<col width="47%" />
+<col width="42%" />
+<col width="46%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Value</th>
@@ -169,7 +169,7 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>status</td>
-<td>KWS_CREATE_PARENT_STATUS</td>
+<td>KWSParentCreateUserStatus</td>
 <td>End status of the operation</td>
 </tr>
 </tbody>
@@ -177,8 +177,8 @@
 <p>The <strong>status</strong> parameter may have the following values:</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="34%" />
-<col width="66%" />
+<col width="52%" />
+<col width="48%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Value</th>
@@ -186,19 +186,19 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>CREATED</td>
+<tr class="row-even"><td>KWSParent_CreateUser_Success</td>
 <td>User was authenticated successfully</td>
 </tr>
-<tr class="row-odd"><td>DUPLICATE</td>
+<tr class="row-odd"><td>KWSParent_CreateUser_DuplicateUsername</td>
 <td>The email is already in use</td>
 </tr>
-<tr class="row-even"><td>INVALID_EMAIL</td>
+<tr class="row-even"><td>KWSParent_CreateUser_InvalidEmail</td>
 <td>Parent email is invalid</td>
 </tr>
-<tr class="row-odd"><td>INVALID_PASSWORD</td>
+<tr class="row-odd"><td>KWSParent_CreateUser_InvalidPassword</td>
 <td>Password is less than 8 characters</td>
 </tr>
-<tr class="row-even"><td>NETWORK_ERROR</td>
+<tr class="row-even"><td>KWSParent_CreateUser_NetworkError</td>
 <td>Other network error</td>
 </tr>
 </tbody>
@@ -242,13 +242,13 @@
     <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Versions</span>
-      1.1.1
+      1.2.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
       <dl>
         
-          <dd><a href="/sa-kws-parent-ios-sdk/latest">1.1.1</a></dd>
+          <dd><a href="/sa-kws-parent-ios-sdk/latest">1.2.0</a></dd>
         
       </dl>
     </div>
@@ -259,7 +259,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1.1',
+            VERSION:'1.2.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

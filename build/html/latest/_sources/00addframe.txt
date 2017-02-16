@@ -3,7 +3,7 @@ Add the SDK as a framework
 
 You can also install the project as a standalone **.framework** library.
 
-First you'll need to download the latest `KidsWebServicesParentSDK-1.1.1.iOS.framework.zip <https://github.com/SuperAwesomeLTD/sa-sdk-build-repo/blob/master/package/kws_parent_ios/1.1.1/KidsWebServicesParentSDK-1.1.1.iOS.framework.zip?raw=true>`_.
+First you'll need to download the latest `KidsWebServicesParentSDK-1.2.0.iOS.framework.zip <https://github.com/SuperAwesomeLTD/sa-sdk-build-repo/blob/master/package/kws_parent_ios/1.2.0/KidsWebServicesParentSDK-1.2.0.iOS.framework.zip?raw=true>`_.
 
 You'll then need to add the .framework file in the **Embedded Binaries** section of your project's target:
 
